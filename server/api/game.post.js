@@ -40,8 +40,9 @@ export default defineEventHandler(async (event) => {
     }
 
     const openaiResponse = await openaiClient.createChatCompletion({
-        model: "gpt-3.5-turbo",
-        max_tokens: 500,
+        model: "gpt-3.5-turbo", // LLM gpt-3.5-turbo か gpt-4 を指定
+        max_tokens: 500, // 最大トークン数
+        temperature: 1, // レスポンスの多様性を調整する
         messages: [{
                 role: "system",
                 content: `プレイヤーは勇者です。
