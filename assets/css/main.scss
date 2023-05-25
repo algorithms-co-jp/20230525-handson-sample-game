@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/** 8bit風フォント */
+@font-face {
+    font-family: "PixelMplus12";
+    src: url("https://cdn.leafscape.be/PixelMplus/PixelMplus12-Regular_web.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "PixelMplus12 Bold";
+    src: url("https://cdn.leafscape.be/PixelMplus/PixelMplus12-Bold_web.woff2") format("woff2");
+}
+
+
+html {
+    font-family: "PixelMplus12";
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+@layer components {
+    .main {
+        @apply min-h-screen h-full w-full flex flex-col justify-center items-center bg-gray-800 text-slate-50;
+    }
+
+    .content {
+        max-width: 512px;
+    }
+
+    .input-row {
+        & label {
+            @apply text-base;
+        }
+
+        & .box {
+            @apply p-1 rounded-md border-2 border-white;
+
+            & input {
+                @apply dark:text-white text-base text-left text-slate-700 outline-none px-3 py-3 rounded w-full;
+            }
+            & textarea {
+                @apply dark:text-white text-base resize-none block text-left text-slate-700 h-full outline-none px-3 py-3 rounded w-full;
+            }
+        }
+    }
+
+    .form {
+        @apply flex flex-col gap-7;
+    }
+
+
+    .button-submit {
+        @apply text-center bg-green-600 hover:bg-green-700 text-2xl w-full text-white py-2 px-4 rounded;
+    }
+}
+
+
+.icon {
+    min-height: 80px;
+    min-width: 80px;
+    height: 80px;
+    width: 80px;
+}

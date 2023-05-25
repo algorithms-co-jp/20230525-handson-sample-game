@@ -8,6 +8,11 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "nuxt": "^3.0.0"
+    "@nuxtjs/tailwindcss": "^6.7.0",
+    "nuxt": "^3.0.0",
+    "sass": "^1.62.1"
+  },
+  "dependencies": {
+    "openai": "^3.2.1"
   }
 }
